@@ -9,11 +9,16 @@ function initializeCarousel() {
   const carouselItems = carousel.querySelectorAll(".carousel-item");
   if (!carouselItems.length) return;
 
-  carouselItems.forEach(item => {
-    item.classList.remove('visible'); // just in case
-    item.classList.add('hidden');
-  })
+  for (let i = 0; i < carouselItems.length; i++) {
 
+    if (i == 0) {
+      carouselItems[i].classList.add('visible');
+      carouselItems[i].classList.remove('hidden');
+    } else {
+      carouselItems[i].classList.remove('visible'); // just in case
+      carouselItems[i].classList.add('hidden');
+    }
+  }
 }
 
 // carousel();
