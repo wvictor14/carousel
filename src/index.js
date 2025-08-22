@@ -1,7 +1,19 @@
 import "./styles.css";
 
 import { initializeDropdowns } from "@victor2wy/basic-dropdown"
-export function carousel() {
+function initializeCarousel() {
+
+  const carousel = document.querySelector(".carousel");
+  if (!carousel) return;
+
+  const carouselItems = carousel.querySelectorAll(".carousel-item");
+  if (!carouselItems.length) return;
+
+  carouselItems.forEach(item => {
+    item.classList.remove('visible'); // just in case
+    item.classList.add('hidden');
+  })
+
 }
 
 // carousel();
@@ -13,3 +25,4 @@ initializeDropdowns();
 // first element is shown at beginning
 // put images into an array
 // functions that cycle through --> next and previous
+initializeCarousel();
