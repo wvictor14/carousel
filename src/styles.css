@@ -5,3 +5,22 @@
 .carousel-item.visible {
   display: flex;
 }
+
+.carousel {
+  display: flex;
+  /* Makes the container a flex container */
+  /* Optional properties for alignment and spacing */
+  justify-content: space-around;
+  /* Distributes space around items */
+  align-items: center;
+  /* Aligns items vertically in the center */
+  gap: 10px;
+  /* Adds space between flex items */
+}
+
+.dropdown-container {
+  margin: 20px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}

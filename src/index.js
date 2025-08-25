@@ -21,8 +21,6 @@ function initializeCarousel() {
   }
 
   // inject the buttons
-  const btnDiv = document.createElement('div');
-  btnDiv.classList.add('btn-container');
   const btnPrev = document.createElement('button');
   btnPrev.classList.add('btn');
   btnPrev.textContent = 'Previous';
@@ -62,9 +60,9 @@ function initializeCarousel() {
   btnPrev.addEventListener("click", () => { handleClick('previous') });
   btnNext.addEventListener("click", () => { handleClick("next") });
 
-  btnDiv.appendChild(btnPrev);
-  btnDiv.appendChild(btnNext);
-  carousel.appendChild(btnDiv);
+  carousel.appendChild(btnNext);
+  carousel.prepend(btnPrev);
+
 
   // btn listeners change state
 
