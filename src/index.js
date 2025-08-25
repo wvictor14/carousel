@@ -2,8 +2,8 @@ import "./styles.css";
 
 import { initializeDropdowns } from "@victor2wy/basic-dropdown"
 
-
-function initializeCarousel() {
+// switch_image_interval milliseconds
+function initializeCarousel(switch_image_interval = 5000) {
 
   const carousel = document.querySelector(".carousel");
   if (!carousel) return;
@@ -67,7 +67,7 @@ function initializeCarousel() {
   carousel.prepend(btnPrev);
 
   // carousel changes every 5 seconds
-  const intervalId = setInterval(() => { handleClick("next") }, 5000);
+  const intervalId = setInterval(() => { handleClick("next") }, switch_image_interval);
 }
 
 let state = 0;
