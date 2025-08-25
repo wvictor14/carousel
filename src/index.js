@@ -1,6 +1,8 @@
 import "./styles.css";
 
 import { initializeDropdowns } from "@victor2wy/basic-dropdown"
+
+
 function initializeCarousel() {
 
   const carousel = document.querySelector(".carousel");
@@ -20,7 +22,7 @@ function initializeCarousel() {
     }
   }
 
-  // inject the buttons
+  // initiate the buttons
   const btnPrev = document.createElement('button');
   btnPrev.classList.add('carousel-btn');
   btnPrev.textContent = '<';
@@ -28,6 +30,7 @@ function initializeCarousel() {
   btnNext.classList.add('carousel-btn');
   btnNext.textContent = '>';
 
+  // define btn eventlistener 
   const handleClick = function (type = 'next') {
 
     // current image hidden;
@@ -63,21 +66,12 @@ function initializeCarousel() {
   carousel.appendChild(btnNext);
   carousel.prepend(btnPrev);
 
-
-  // btn listeners change state
-
+  // carousel changes every 5 seconds
+  const intervalId = setInterval(() => { handleClick("next") }, 5000);
 }
-
 
 let state = 0;
 
-// carousel();
-// Temporary debugging - add this to your index.js
 initializeDropdowns();
-
-
-// initialize carousel items with the hidden class
-// first element is shown at beginning
-// put images into an array
-// functions that cycle through --> next and previous
 initializeCarousel();
+
