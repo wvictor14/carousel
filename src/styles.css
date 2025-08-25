@@ -8,14 +8,21 @@
 
 .carousel {
   display: flex;
-  /* Makes the container a flex container */
-  /* Optional properties for alignment and spacing */
-  justify-content: space-around;
-  /* Distributes space around items */
   align-items: center;
-  /* Aligns items vertically in the center */
-  gap: 10px;
-  /* Adds space between flex items */
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.carousel-btn {
+  background: #333;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .dropdown-container {

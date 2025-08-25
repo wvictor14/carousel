@@ -22,11 +22,11 @@ function initializeCarousel() {
 
   // inject the buttons
   const btnPrev = document.createElement('button');
-  btnPrev.classList.add('btn');
-  btnPrev.textContent = 'Previous';
+  btnPrev.classList.add('carousel-btn');
+  btnPrev.textContent = '<';
   const btnNext = document.createElement('button');
-  btnNext.classList.add('btn');
-  btnNext.textContent = 'Next';
+  btnNext.classList.add('carousel-btn');
+  btnNext.textContent = '>';
 
   const handleClick = function (type = 'next') {
 
