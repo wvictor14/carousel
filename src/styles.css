@@ -31,3 +31,11 @@
   display: flex;
   align-items: center;
 }
+
+.carousel-circle {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  /* This makes it a circle */
+}

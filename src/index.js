@@ -85,6 +85,23 @@ function initializeCarousel(switch_image_interval = 5000) {
     }
   });
 
+  // add circles to bottom
+
+  const circleDiv = document.createElement('div');
+  circleDiv.classList.add('carousel-circles-container');
+
+  const circles = [];
+
+  for (let i = 0; i < carouselItems.length; i++) {
+    circles[i] = document.createElement('div');
+    circles[i].classList.add('carousel-circle');
+    circleDiv.appendChild(circles[i]);
+  }
+
+  carousel.append(circleDiv);
+
+
+
 }
 
 let state = 0;
