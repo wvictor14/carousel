@@ -68,6 +68,23 @@ function initializeCarousel(switch_image_interval = 5000) {
 
   // carousel changes every 5 seconds
   const intervalId = setInterval(() => { handleClick("next") }, switch_image_interval);
+
+  // add prev and next to arrow keys
+
+  document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+      case 'ArrowLeft':
+        handleClick('previous')
+        break;
+      case 'ArrowRight':
+        handleClick("next")
+        break;
+      default:
+        // Optional: Handle other keys or do nothing
+        break;
+    }
+  });
+
 }
 
 let state = 0;
