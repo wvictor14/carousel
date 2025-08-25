@@ -98,8 +98,22 @@ function initializeCarousel(switch_image_interval = 5000) {
     circleDiv.appendChild(circles[i]);
   }
 
-  carousel.append(circleDiv);
 
+
+
+  // move carousel items + btns to row 1
+  const row1 = document.createElement('div');
+  row1.classList.add('carousel-content');
+  row1.appendChild(btnPrev);
+
+  // move carousel items to the container
+  carouselItems.forEach(item => {
+    row1.appendChild(item);
+  });
+
+  row1.appendChild(btnNext);
+  carousel.appendChild(row1);
+  carousel.append(circleDiv);
 
 
 }

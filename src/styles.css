@@ -6,12 +6,7 @@
   display: flex;
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-}
+.carousel {}
 
 
 .carousel-btn {
@@ -25,16 +20,25 @@
   font-size: 18px;
 }
 
-.dropdown-container {
+.carousel-content {
   margin: 20px;
   justify-content: space-around;
   display: flex;
   align-items: center;
 }
 
+
+.carousel-circles-container {
+  margin: 20px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+
+}
+
 .carousel-circle {
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   background-color: blue;
   border-radius: 50%;
   /* This makes it a circle */
